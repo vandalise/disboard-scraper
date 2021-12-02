@@ -1,7 +1,5 @@
-import requests
 from bs4 import BeautifulSoup
-import time
-from dhooks import Webhook
+import requests
 
 for i in range(3):
     keywords = ["put", "your", "keywords", "like", "this"] 
