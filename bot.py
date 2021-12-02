@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import time
-from dhooks import Webhook
+#from dhooks import Webhook
 
 #hook = Webhook("input webhook here")
 
