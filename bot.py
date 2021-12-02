@@ -12,6 +12,7 @@ while True:
         r = requests.get(f'https://disboard.org/servers/tag/{keyword}/1', ).text
         if "Too Many Requests" in r:
             print("Ratelimited")
+            #this doesnt really matter, i just added it so theres something to look at
         else:
             print("Working")
         servers = BeautifulSoup(r, 'html.parser').findAll('div', class_="column is-one-third-desktop is-half-tablet")
@@ -26,5 +27,6 @@ while True:
                 tempinvite = x.text
                 invite = tempinvite.replace('"', '')
                 print(invite)
+                #remove #'s if you want to send the invite to a webhook
                 #hook.send(f"{invite}  | ``https://disboard.org/server/{eyedee}``")
     time.sleep(5)
